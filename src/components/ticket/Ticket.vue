@@ -38,7 +38,6 @@
   import IScroll from 'iscroll/build/iscroll-probe'
   import ShopCart from './ShopCart'
   import CartControl from './CartControl'
-
   export default {
     created() {
       this.$axios.get('/api/hotPlay')

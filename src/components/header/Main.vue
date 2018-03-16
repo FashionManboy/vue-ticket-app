@@ -2,7 +2,7 @@
     <div>
       <h3>所有注册用户</h3>
       <ul>
-        <li v-for="item in list">{{item.username}}</li>
+        <li v-for="item in list" :key="item.id">{{item.username}}</li>
       </ul>
     </div>
 </template>
@@ -11,12 +11,12 @@
     export default {
         data() {
             return {
-              list:''
+              list: ''
             }
         },
-      mounted(){
-          this.$http.get(httpUrl.test1).then((res) =>{
-              this.list=res.data
+      mounted() {
+          this.$http.get(httpUrl.test1).then((res) => {
+              this.list = res.data
               console.log(res)
             })
       }
